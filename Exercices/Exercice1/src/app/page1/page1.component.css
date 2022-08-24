@@ -1,0 +1,21 @@
+button{
+  color: white;
+}
+
+.pagesecrete{
+  position: relative;
+  right: 0px;
+  width: 300px;
+  height: 200px;
+  background-color: pink;
+}
+
+.stylecompteur1{
+  background-color: blue;
+  color: white;
+}
+
+.stylecompteur2{
+  background-color: pink;
+  color:black
+}

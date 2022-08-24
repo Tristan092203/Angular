@@ -1,0 +1,19 @@
+<body>
+  <div class="container d-flex justify-content-center">
+    <button (click)="view()" (click)="resetDateHours()" class="btn btn-dark">
+      PRESS HERE
+    </button>
+  </div>
+
+  <div *ngIf="verif === true" class="pagesecrete overflow-auto">
+    JE SUIS LA PARTIE SECRETE DE LA PAGE
+    <span>
+      <p [ngClass]="fondbleu ? 'stylecompteur1' : 'stylecompteur2'">Nombre de clics: {{ compteur }}</p>
+      <ul>
+        <li>Date actuelle: {{ date }}</li>
+        <li>Heure actuelle: {{ hours }}</li>
+        <li *ngFor="let hours of tabHours">Date: {{date}} // Heure:{{hours}}</li>
+      </ul>
+    </span>
+  </div>
+</body>
