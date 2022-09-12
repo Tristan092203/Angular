@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center align-items-center">
+  <table class="table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom du produit</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Show Details</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of data; let i = index">
+        <td>{{i}}</td>
+        <td>{{data.productName}}</td>
+        <td>{{data.productAdjective}}</td>
+        <td>{{data.price}}</td>
+        <td class="d-flex justify-content-center"><button class="btn btn-danger"><a  (click)="showDetails(i)"> Details</a></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

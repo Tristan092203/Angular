@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+body, html{
+  width: 100%;
+  height: 100%;
+}
+.posFooter{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgb(17, 93, 216) ;
+  color: white;
+  height: 100px;
+
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:link
+{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: white;
+}
+
+app-pagedetails{
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  height: 575px;
+  margin-bottom: 20px;
+}
+
+

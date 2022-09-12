@@ -1,0 +1,14 @@
+<div class="container">
+  <button class="btn btn-primary" (click)="showJavaArticle()">
+    Java Article
+  </button>
+  <button class="btn btn-primary"(click)="showAngularArticle()" >Angular Article</button
+  ><button class="btn btn-primary" (click)="showFavoriteArticle()">Favorite Article</button>
+  <div>
+    <ul>
+      <li *ngFor="let article of articles$ | async">
+        {{ article.id }} - {{ article.title }} - {{ article.category }}
+      </li>
+    </ul>
+  </div>
+</div>

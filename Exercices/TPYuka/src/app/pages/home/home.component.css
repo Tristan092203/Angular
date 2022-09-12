@@ -1,0 +1,19 @@
+.posCarousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+img{
+  height: 300px;
+  width: 120;
+}
+
+.posBtnStart{
+  padding-top: 80px;
+}
+
+.btnStart{
+  box-shadow: 5px 5px 5px grey;
+}

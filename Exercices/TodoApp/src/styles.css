@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.positionnement {
+  display: flex;
+  justify-content: center;
+}
+
+.posform {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+h1 {
+  color: lightslategrey;
+}
+
+input {
+  border-radius: 5px;
+  width: 300px;
+}
+
+.posbutton{
+  margin-top: 10px;
+  margin-right: 70px;
+}

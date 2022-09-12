@@ -1,0 +1,225 @@
+<div class="container d-flex p-5 flex-row justify-content-center">
+  <div class="card w-50">
+    <div class="card-body mx-5">
+      <form action="" (ngSubmit)="validation()" [formGroup]="myGroup">
+        <div class="row text-center mt-2">
+          <div class="col-6">
+
+            <input type="radio" class="btn-check" formControlName="gender" name="gender" id="option1"
+
+            autocomplete="off" value="Madame">
+
+        <label class="btn btn-outline-success w-50 d-flex flex-row text-center" for="option1">Madame</label>
+          </div>
+          <div class="col-6">
+
+
+            <input type="radio" class="btn-check" formControlName="gender" name="gender" id="option2"
+
+            autocomplete="off" value="Monsieur">
+
+        <label class="btn btn-outline-success w-50 d-flex flex-row text-center" for="option2">Monsieur</label>
+          </div>
+          </div>
+
+        <div class="row my-3 pt-2">
+          <div class="col-6">
+            <small *ngIf="!lastname.invalid"
+              ><i class="bi bi-check-circle text-success"></i
+            ></small>
+            <label for="lastname">Nom </label>
+            <input
+              type="text"
+              formControlName="lastname"
+              class="form-control"
+              placeholder="Nom"
+            />
+            <div
+              *ngIf="lastname.invalid && lastname.touched"
+              class="text-danger"
+            >
+              <div *ngIf="lastname.errors">
+                <small>Le champ est requis.</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <small *ngIf="!firstname.invalid"
+              ><i class="bi bi-check-circle text-success"></i
+            ></small>
+            <label for="firstname">Prénom </label>
+            <input
+              type="text"
+              formControlName="firstname"
+              class="form-control"
+              placeholder="Prénom"
+            />
+            <div
+              *ngIf="firstname.invalid && firstname.touched"
+              class="text-danger"
+            >
+              <div *ngIf="firstname.errors">
+                <small>Le champ est requis.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-6">
+            <small *ngIf="!email.invalid"
+              ><i class="bi bi-check-circle text-success"></i
+            ></small>
+            <label for="email">Mail </label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="Email"
+            />
+            <div *ngIf="email.invalid && email.touched" class="text-danger">
+              <div *ngIf="email.errors?.['required']">
+                <small>Le champ est requis.</small>
+              </div>
+              <div *ngIf="email.errors?.['pattern']">
+                <small
+                  >Veuillez entrer un "@" et finir votre adresse par
+                  ".com/.fr"</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <small *ngIf="!tel.invalid"
+              ><i class="bi bi-check-circle text-success"></i
+            ></small>
+            <label for="tel">Téléphone </label>
+            <input
+              type="text"
+              formControlName="tel"
+              class="form-control"
+              placeholder="Téléphone"
+            />
+            <div *ngIf="tel.invalid && tel.touched" class="text-danger">
+              <div *ngIf="tel.errors?.['required']">
+                <small>Le champ est requis.</small>
+              </div>
+              <div *ngIf="tel.errors?.['maxlength']">
+                <small>Veuillez saisir 10 chiffres maximum.</small>
+              </div>
+              <div *ngIf="tel.errors?.['pattern']">
+                <small>Veuillez entrer des chiffres uniquement.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-6">
+            <small *ngIf="!city.invalid"
+              ><i class="bi bi-check-circle text-success"></i
+            ></small>
+            <label for="city">Ville </label>
+            <input
+              type="text"
+              formControlName="city"
+              class="form-control"
+              placeholder="Ville"
+            />
+            <div *ngIf="city.invalid && city.touched" class="text-danger">
+              <div *ngIf="city.errors">
+                <small>Le champ est requis.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <small *ngIf="!zipcode.invalid"
+              ><i class="bi bi-check-circle text-success"></i
+            ></small>
+            <label for="zipcode">Code Postal </label>
+            <input
+              type="text"
+              formControlName="zipcode"
+              class="form-control"
+              placeholder="Code Postal"
+            />
+            <div *ngIf="zipcode.invalid && zipcode.touched" class="text-danger">
+              <div *ngIf="zipcode.errors?.['required']">
+                <small>Le champ est requis.</small>
+              </div>
+              <div *ngIf="zipcode.errors?.['minlength']">
+                <small>Veuillez entrer 5 chiffres minimum.</small>
+              </div>
+              <div *ngIf="zipcode.errors?.['maxlength']">
+                <small>Veuillez entrer 5 chiffres maximum.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center flex-column">
+          <div class="row-3">
+            <div class="form-group">
+              <div class="form-check">
+                <input
+
+                  formControlName="condutilisation"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck"
+                  required
+
+                />
+                <label class="form-check-label" for="invalidCheck">
+                  J'accepte les conditions générales d'utilisation
+                </label>
+                <div *ngIf="condutilisation.invalid && condutilisation.touched" class="text-danger">
+                  Vous devez accepter les CGU avant de continuer.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-3">
+            <div class="form-check">
+              <input
+                ng-checked="condutilisation"
+                class="form-check-input"
+                type="checkbox"
+                value="condutilisation"
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Etre informé des offres promotionnelles en lien avec la
+                rénovation
+              </label>
+            </div>
+          </div>
+          <div class="row-3">
+            <div class="form-check">
+              <input
+              formControlName="renovtravaux"
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Etre contacté par un conseiller "renovation-travaux" pour le
+                suivi de votre projet
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            routerLink="affichetab"
+            type="submit"
+            class="btn btn-outline-success w-25"
+            [disabled]="!myGroup.valid"
+          >
+            Validation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

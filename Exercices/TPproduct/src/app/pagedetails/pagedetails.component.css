@@ -1,0 +1,24 @@
+.posCard{
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+h5{
+  text-align: center;
+}
+
+.returnButton{
+  background-color: rgb(17, 93, 216) ;
+}
+
+img{
+  width: 50% ;
+  height: 50%;
+
+}
+
+.posImg{
+  display: flex;
+  justify-content: center;
+}
