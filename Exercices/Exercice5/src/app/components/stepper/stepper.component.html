@@ -1,0 +1,16 @@
+<mat-horizontal-stepper>
+  <mat-step label="Step 1">
+    <button mat-button matStepperNext (click)="Augment($event)">Next</button>
+  </mat-step>
+<mat-step label="Step 2">
+  <button mat-button matStepperPrevious>Previous</button>
+  <button mat-button matStepperNext (click)="Augment($event)">Next</button>
+</mat-step>
+<mat-step label="Step 3">
+  <button mat-button matStepperPrevious>Previous</button>
+  <button mat-button matStepperNext (click)="Augment($event)">Next</button>
+</mat-step>
+<mat-step label="Step 4">
+  <button mat-button matStepperPrevious>Previous</button>
+</mat-step>
+</mat-horizontal-stepper>
